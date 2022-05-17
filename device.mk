@@ -49,9 +49,51 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     qcom_decrypt \
     qcom_decrypt_fbe
+    
+PRODUCT_PACKAGES += \
+    libQSEEComAPI \
+    libdrmfs \
+    libcap \
+    libion \
+    libQSEEComAPI \
+    libdrmfs \
+    libdiag \
+    libxml2 \
+    libxml2.so \
+    libandroidicu.so \
+    libandroidicu.recovery  
+  
+    
+    
+PRODUCT_HOST_PACKAGES := \
+    icu4j \
+    libandroidicu \
+    libicuuc 
+   
+    
+APEX_MODULE_LIBS := \
+  libadbconnection.so \
+  libandroidicu.so \
+  libicuuc.so 
+  
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0.vendor \
+    android.hardware.keymaster@3.0.vendor-qti \
+    android.hardware.keymaster@4.0.vendor \
+    android.hardware.keymaster@4.0.vendor-qti \
+    android.hardware.keymaster@4.1.vendor \
+    android.hardware.keymaster@4.1.vendor-qti \
+    android.hardware.keymaster@4.1.vendor-citadel \
+    android.hardware.gatekeeper@1.0-service \
+    android.hardware.gatekeeper@1.0-service-qti
+
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Enable virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
+
+
