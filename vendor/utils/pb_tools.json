@@ -1,0 +1,26 @@
+[
+    {
+        "asset_name": "Magisk-{tag}.apk",
+        "gh_repo": "topjohnwu/Magisk",
+        "name": "Magisk",
+        "only_tags": "True",
+        "tag_name": "v24.3",
+        "zip_name": "magisk.zip"
+    },
+    {
+        "asset_name": "Magisk-uninstaller-\\d+.zip",
+        "gh_repo": "topjohnwu/Magisk",
+        "name": "Magisk Uninstaller",
+        "only_tags": "True",
+        "regex": "true",
+        "tag_name": "v21.4",
+        "zip_name": "unrootmagisk.zip"
+    },
+    {
+        "asset_name": "MMRT-{tag}.zip",
+        "gh_repo": "Pzqqt/Magisk_Manager_Recovery_Tool",
+        "name": "Magisk Manager Recovery Tool",
+        "tag_name": "v2.4",
+        "zip_name": "magiskmanagerrecovery.zip"
+    }
+]

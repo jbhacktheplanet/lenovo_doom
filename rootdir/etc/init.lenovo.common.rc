@@ -1,0 +1,105 @@
+# common config for all projects.
+import init.set_kptr.rc
+
+on post-fs
+    chown system system /sys/class/dsi_hbm/hbm/enable
+    chown system system /sys/class/backlight/panel0-hbm/brightness
+    chmod 666 /sys/class/backlight/panel0-hbm/brightness
+    chmod 666 /sys/class/backlight/panel0-backlight/brightness
+    chown system system /sys/class/leds/aw22xxx_led/aw_brightness
+    chown system system /sys/class/leds/aw22xxx_led/fan_brightness
+    chmod 666 /sys/class/leds/vibrator/activate
+    chmod 666 /sys/class/leds/vibrator/duration
+    chmod 666 /sys/class/leds/vibrator/double_duration
+    chmod 666 /sys/class/leds/vibrator/state
+    chmod 666 /sys/class/leds/vibrator/cali_lra
+    chmod 666 /sys/class/leds/vibrator/cali
+    chmod 666 /sys/class/leds/vibrator/dual_cancel
+    chmod 666 /sys/class/leds/vibrator/trig
+    chmod 666 /sys/class/leds/vibrator_aw8697x/cali
+    chmod 666 /sys/class/leds/vibrator_aw8697x/cali_lra
+    chmod 666 /sys/class/leds/vibrator_aw8697x/trig
+    chmod 0666 /mnt/vendor/persist/factory/audio/aw_cali.bin
+    chmod 666 /sys/bus/i2c/drivers/aw8680x_touch/2-005c/touch_callback
+    chown system /sys/bus/i2c/drivers/aw8680x_touch/2-005c/press_threshold
+    chmod 660 /sys/bus/i2c/drivers/aw8680x_touch/2-005c/press_threshold
+    chown system /sys/bus/i2c/drivers/aw8680x_touch/2-005c/bottom_range
+    chown system /sys/bus/i2c/drivers/aw8680x_touch/2-005c/top_range
+    chown system /sys/bus/i2c/drivers/aw8680x_touch/2-005c/ftp_enable
+    chown system /sys/bus/i2c/drivers/aw9203_ts/2-002c/cap_l_enable
+    chown system /sys/bus/i2c/drivers/aw9203_ts/2-002c/cap_r_enable
+    chown system /sys/bus/i2c/drivers/aw9203_ts/2-002d/cap_l_enable
+    chown system /sys/bus/i2c/drivers/aw9203_ts/2-002d/cap_r_enable
+    chown system /sys/bus/i2c/drivers/aw9203_ts/2-002c/slidemode
+    chown system /sys/bus/i2c/drivers/aw9203_ts/2-002d/slidemode
+#Awinic haptic ZUIQ-5009
+    chown audioserver audioserver /dev/awinic_haptic
+    chown audioserver audioserver /sys/class/leds/vibrator/haptic_audio
+
+on init
+#added touch gesture wake node permission
+    chown system /sys/devices/virtual/touch/tp_dev/gesture_on
+    chown system /sys/devices/virtual/touch/tp_dev/touch_key
+    chown system /sys/devices/virtual/touch/tp_dev/touch_key1
+    chown system /sys/devices/virtual/touch/tp_dev/touch_key2
+    chown system /sys/devices/virtual/touch/tp_dev/touch_key3
+    chown system /sys/devices/virtual/touch/tp_dev/touch_key4
+    chown system /sys/devices/virtual/touch/tp_dev/touch_key5
+    chown system /sys/devices/virtual/touch/tp_dev/touch_key6
+    chown system /sys/devices/virtual/touch/tp_dev/touch_key7
+    chown system /sys/devices/virtual/touch/tp_dev/touch_key8
+    chown system /sys/devices/virtual/touch/tp_dev/touch_key9
+    chown system /sys/devices/virtual/touch/tp_dev/finger_match
+    chown system /sys/devices/virtual/touch/tp_dev/report_rate
+    chown system /sys/devices/virtual/touch/tp_dev/input_enable
+    chown system /sys/devices/virtual/touch/tp_dev/pad_abs0
+    chown system /sys/devices/virtual/touch/tp_dev/pad_abs1
+    chown system /sys/devices/virtual/touch/tp_dev/pad_key0
+    chown system /sys/devices/virtual/touch/tp_dev/pad_key1
+    chown system /sys/devices/virtual/touch/tp_dev/orientation_mode
+
+# Use adb shell in user build
+on property:ro.boot.adbon=true
+    setprop persist.sys.zui.dis_adb_auth true
+    setprop persist.sys.usb.config diag,adb
+
+# wlan sar select 0
+service select_sar_0 /vendor/bin/vendor_cmd_tool  \
+                     -f /vendor/etc/wifi/vendor_cmd.xml  \
+					 -i wlan0  \
+					 --START_CMD  \
+					 --SAR_SET  \
+					 --ENABLE 0  \
+					 --NUM_SPECS 0  \
+					 --END_CMD
+    class main
+    user root
+    group root system wifi
+#    seclabel u:r:vendor_wcnss_service:s0
+    oneshot
+    disabled
+
+
+# wlan sar select 5
+service select_sar_5 /vendor/bin/vendor_cmd_tool  \
+                     -f /vendor/etc/wifi/vendor_cmd.xml  \
+					 -i wlan0  \
+					 --START_CMD  \
+					 --SAR_SET  \
+					 --ENABLE 5  \
+					 --NUM_SPECS 0  \
+					 --END_CMD
+    class main
+    user root
+    group root system wifi
+#    seclabel u:r:vendor_wcnss_service:s0
+    oneshot
+    disabled
+
+# wlan sar select
+on property:vendor.wlan.sar_select=0
+    start select_sar_0
+
+on property:vendor.wlan.sar_select=5
+    start select_sar_5
+

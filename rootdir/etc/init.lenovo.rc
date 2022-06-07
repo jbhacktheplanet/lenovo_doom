@@ -1,0 +1,113 @@
+# init.doom.rc
+
+on boot
+	mkdir /mnt/vendor/persist/camera 0775 system system
+
+# for fan
+    chown system system /sys/class/hwmon/hwmon0/fan0_clock
+    chmod 0666 /sys/class/hwmon/hwmon0/fan0_clock
+    chown system system /sys/class/hwmon/hwmon0/fan0_enable
+    chmod 0666 /sys/class/hwmon/hwmon0/fan0_enable
+    chown system system /sys/class/hwmon/hwmon0/fan0_duty
+    chmod 0666 /sys/class/hwmon/hwmon0/fan0_duty
+    chown system system /sys/class/hwmon/hwmon0/fan1_clock
+    chmod 0666 /sys/class/hwmon/hwmon0/fan1_clock
+    chown system system /sys/class/hwmon/hwmon0/fan1_enable
+    chmod 0666 /sys/class/hwmon/hwmon0/fan1_enable
+    chown system system /sys/class/hwmon/hwmon0/fan1_duty
+    chmod 0666 /sys/class/hwmon/hwmon0/fan1_duty
+# for thermal
+    chown system system /sys/devices/system/cpu/cpu0/rq-stats/mpctl
+    chmod 0666 /sys/devices/system/cpu/cpu0/rq-stats/mpctl
+
+    chown system system /sys/class/thermal/cooling_device0/cur_state
+    chmod 0666 /sys/class/thermal/cooling_device0/cur_state
+    chown system system /sys/class/thermal/cooling_device1/cur_state
+    chmod 0666 /sys/class/thermal/cooling_device1/cur_state
+    chown system system /sys/class/thermal/cooling_device2/cur_state
+    chmod 0666 /sys/class/thermal/cooling_device2/cur_state
+    chown system system /sys/class/thermal/cooling_device27/cur_state
+    chmod 0666 /sys/class/thermal/cooling_device27/cur_state
+
+    chown system system /sys/class/lenovo_supply/thermal/therm_camera
+    chmod 0666 /sys/class/lenovo_supply/thermal/therm_camera
+    chown system system /sys/class/lenovo_supply/thermal/therm_camera_level
+    chmod 0666 /sys/class/lenovo_supply/thermal/therm_camera_level
+    chown system system /sys/class/lenovo_supply/thermal/therm_display_rate
+    chmod 0666 /sys/class/lenovo_supply/thermal/therm_display_rate
+    chown system system /sys/class/lenovo_supply/thermal/therm_display_rate_level
+    chmod 0666 /sys/class/lenovo_supply/thermal/therm_display_rate_level
+    chown system system /sys/class/lenovo_supply/thermal/therm_modem_5g
+    chmod 0666 /sys/class/lenovo_supply/thermal/therm_modem_5g
+    chown system system /sys/class/lenovo_supply/thermal/therm_modem_5g_level
+    chmod 0666 /sys/class/lenovo_supply/thermal/therm_modem_5g_level
+    chown system system /sys/class/lenovo_supply/thermal/therm_speaker
+    chmod 0666 /sys/class/lenovo_supply/thermal/therm_speaker
+    chown system system /sys/class/lenovo_supply/thermal/therm_speaker_level
+    chmod 0666 /sys/class/lenovo_supply/thermal/therm_speaker_level
+# for battery
+    chown system system /sys/class/lenovo_supply/bq2589h-charger/user_charging_enabled
+    chmod 0666 /sys/class/lenovo_supply/bq2589h-charger/user_charging_enabled
+    chown system system /sys/class/lenovo_supply/bq2589h-charger/user_health_charge
+    chmod 0666 /sys/class/lenovo_supply/bq2589h-charger/user_health_charge
+    chown system system /sys/class/lenovo_supply/bq2589h-charger/user_input_suspend
+    chmod 0666 /sys/class/lenovo_supply/bq2589h-charger/user_input_suspend
+    chmod 0666 /sys/class/lenovo_supply/bq2589h-charger/fac_test_enable
+    chown system system /sys/class/lenovo_supply/bq2589h-charger/batt_charge_accelerate_en
+    chmod 0666 /sys/class/lenovo_supply/bq2589h-charger/batt_charge_accelerate_en
+on post-fs
+    #goodix
+    chown system system /dev/goodix_fp
+    chmod 666 /dev/goodix_fp
+    mkdir /mnt/vendor/persist/fpdata 0775 system system
+    chmod 775 /mnt/vendor/persist/fpdata/
+    chmod 666 /mnt/vendor/persist/fpdata/BMatrix.so
+    chmod 666 /mnt/vendor/persist/fpdata/caliParamsInfo.so
+    chmod 666 /mnt/vendor/persist/fpdata/cali_data.so
+    chmod 666 /mnt/vendor/persist/fpdata/chartbase.so
+    restorecon_recursive  /mnt/vendor/persist/fpdata
+    chown system system /sys/class/dsi_hbm/hbm/enable
+    chown system system /sys/class/backlight/panel0-hbm/brightness
+    chmod 666 /sys/class/backlight/panel0-hbm/brightness
+    chmod 666 /sys/class/backlight/panel0-backlight/brightness
+
+#awinic
+    chown system system /sys/bus/i2c/drivers/aw882xx_smartpa/1-0035/cali
+    chmod 0664 /sys/bus/i2c/drivers/aw882xx_smartpa/1-0035/cali
+    chown system system /sys/bus/i2c/drivers/aw882xx_smartpa/1-0034/cali
+    chmod 0664 /sys/bus/i2c/drivers/aw882xx_smartpa/1-0034/cali
+    mkdir /mnt/vendor/persist/factory 0775 system system
+    mkdir /mnt/vendor/persist/factory/audio 0775 system system
+    chmod 0666 /mnt/vendor/persist/factory/audio/aw_cali.bin
+#Awinic haptic ZUIR-1878
+    chown audioserver audioserver /dev/awinic_haptic
+    chown audioserver audioserver /sys/class/leds/vibrator/haptic_audio
+
+#pixelworks
+    chown system system /sys/devices/platform/soc/soc:pxlw,iris/selftest
+    chmod 666 /sys/devices/platform/soc/soc:pxlw,iris/selftest
+    chown system system /sys/class/panel/cellid/id
+    chmod 666 /sys/class/panel/cellid/id
+
+#dp switch
+    chown system system /sys/devices/platform/soc/ae90000.qcom,dp_display/prefer_mode
+    chown system system /sys/devices/platform/soc/ae90000.qcom,dp_display/hpd_sim
+    chmod 0666 /sys/devices/platform/soc/ae90000.qcom,dp_display/prefer_mode
+    chmod 0666 /sys/devices/platform/soc/ae90000.qcom,dp_display/hpd_sim
+
+#sona key
+    chown system system /sys/class/edge/snt8100fsr/force_threshold
+    chown system system /sys/class/edge/snt8100fsr/raw_report
+    chown system system /sys/class/edge/snt8100fsr/misc_cmd
+    chown system system /sys/class/edge/snt8100fsr/set_reg
+
+# Add factest service
+service factest /vendor/bin/factest
+    class main
+    user root
+    group root system vendor_qti_diag sdcard_rw cache drmrpc
+
+# Factory reset
+on property:vendor.wipe_data=1
+    factory_data_misc
+

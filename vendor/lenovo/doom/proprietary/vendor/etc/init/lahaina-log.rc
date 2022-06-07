@@ -1,0 +1,6 @@
+on property:persist.log.tag.dloadmode.config=1
+    setprop persist.vendor.ssr.enable_ramdumps 0
+
+on property:persist.log.tag.dloadmode.config=0
+    setprop persist.vendor.ssr.enable_ramdumps 1
+

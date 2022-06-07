@@ -1,0 +1,8 @@
+service protooemperf-1-0 /vendor/bin/hw/vendor.zui.hardware.protooemperf@1.0-service
+    interface vendor.zui.hardware.protooemperf@1.0::IProtoOemPerf default
+    class hal
+    user system
+    group system
+    oneshot
+    disabled
+
