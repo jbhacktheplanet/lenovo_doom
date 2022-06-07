@@ -1,0 +1,106 @@
+# version 2.2i  02/06/21. chenhang2 modified on 02/22
+
+# Disable touch Processing
+0x01 1 0
+
+# Tap new format version 0
+0x2c 3 0 8 0x0802 #Tap header offset 0, size = 8 bytes
+0x200 4 0x0010 0x0 0x0 0x0   # NFI=1, Version=0
+
+# (R1) Tap0 Bottom Right region
+0x2c 3 8 20 0x0802 #Tap0 header offset 8, size = 20 bytes
+0x200 10 
+0x0709                # init_force=7, bar_id=0, SID=1, en=1
+0x1907                # trig_id = 12, gre=1, slope_window=7
+0 0xffff              # set entire bar as active region
+0xffff                # delta tap/release force off
+0x0303                # slope_detect_force=3, slope_release_fore=3
+0 0                   # palm_reject_thresh=0, drag_reject_thresh=0
+0xc00f 0              # adaptive_thresh_timeout, release_force=15, reserved
+
+# (R2) Tap1 Bottom Left region
+0x2c 3 28 20 0x0802 #Tap1 is offset 28, only write ctrl register
+0x200 10 
+0x071d                # init_force=7, bar_id=1, SID=1, ROT=1, en=1
+0x1d07                # trig_id = 14, gre=1, slope_window=7
+0 0x0035              # set entire bar as active region .
+0xffff                # delta tap/release force off
+0x0303                # slope_detect_force=3, slope_release_fore=3
+0 0                   # palm_reject_thresh=0, drag_reject_thresh=0
+0xc00f 0              # adaptive_thresh_timeout, release_force=15, reserved
+
+# (L2) Tap2 Top Right region
+0x2c 3 48 20 0x0802   # Tap1 is offset 48, only write ctrl register
+0x200 10            
+0x072d                # init_force=7, bar_id=2, SID=1, ROT=1,en=1
+0x0707                # trig_id = 3, gre=1, slope_window=7
+0 0x0035              # set entire bar as active region .
+0xffff                # delta tap/release force off
+0x0303                # slope_detect_force=3, slope_release_fore=3
+0 0 		          # palm_reject_thresh=0, drag_reject_thresh=0
+0xc30f 0              # adaptive_thresh_timeout, release_force=15, reserved
+
+# (L1) Tap3 Top Left region
+0x2c 3 68 20 0x0802    # Tap1 is offset 68, only write ctrl register
+0x200 10 
+0x0739                 # init_force=7, bar_id=3, SID=1, en=1
+0x0907                 # trig_id = 4, gre=1, slope_window=7
+0 0xffff               # set entire bar as active region .
+0xffff                 # delta tap/release force off
+0x0303                 # slope_detect_force=3, slope_release_fore=3
+0 0                    # palm_reject_thresh=0, drag_reject_thresh=0
+0xc00f 0               # adaptive_thresh_timeout, release_force=15, reserved
+
+0x2c 3 0 0 0x0803      #commit tap bank
+
+#  Slider config bank
+0x2c 3 0 48 0x0b02
+0x200 24 
+# Slider R1
+0xc001          # en=1, TPri=1, forceS=0, report relative position = 0, bar_id=0, trig_id=0, gre=1
+0x0 0xffff      # set detection area to the whole bar 
+0x1827          # detect_move_quanta = 24 (1.5mm), forect_threshold = 39
+0x0006 0        # report_move_quanta = 6 (0.375mm)
+
+# Force slider R2
+0x911f          # en=1, forceS=1, bar_id=1, trig_id=15, gre=1
+0x0 0x0035      # set detection area to the whole bar
+0x0a00          # detect_quanta = 10, force_threshold = 0
+0x0002 0        # report_quanta = 2
+
+# Force slider L2
+0x921b          # en=1, forceS=1, bar_id=2, trig_id=13, gre=1
+0x0 0x0035      # set detection area to the whole bar
+0x0a00          # detect_quanta = 10, force_threshold = 0
+0x0002 0        # report_quanta = 2
+
+# Slider L1
+0xc301          # en=1, TPri=1, forceS=0, report relative position = 0, bar_id=3, trig_id=0, gre=1
+0x0 0xffff      # set detection area to the whole bar
+0x1827          # detect_move_quanta = 24 (1.5mm), forect_threshold = 39
+0x0006 0        # report_move_quanta = 6 (0.375mm)
+
+0x2c 3 0 0 0x0b03     #commit slide bank
+
+# Trigger Control registers
+0x10 1 0x0022 
+0x1a 2 0x201c 0xd020
+
+# Trigger Pulse Duration
+# Trigger4 – Pulse width 16ms (0x8f - 127 = 16)
+0x1d 1 0x7f00
+
+# Turn off Track Reports in TFIFO (STR bit 4)
+0x40 1 8
+#turn on performance detection mode
+0x3d 1 0x0080
+
+# Set up Dynamic Power Control (DPC)
+# HighResFrameRate=50Hz
+# LowResFrameRate=20Hz
+# IdleTimout=2seconds
+# AccessOnTFifo=1
+0x39 3 100 20 0x87d0
+
+# Re-enable Touch Processing
+0x01 1 1

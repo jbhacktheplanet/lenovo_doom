@@ -1,0 +1,450 @@
+{
+  "LYF": {
+    "mobee01a": {
+      "name": "LYF Water 8",
+      "maintainer": "Mohd Faraz"
+    },
+    "zx55q05": {
+      "name": "LYF Water 7",
+      "maintainer": "PBRP Team"
+    }
+  },
+  "ASUS": {
+    "I01WD": {
+      "name": "ASUS ZenFone 6/6Z",
+      "maintainer": "PBRP Team"
+    },
+    "X00P": {
+      "name": "ASUS ZenFone Max M1",
+      "maintainer": "Raza"
+    },
+    "X00T": {
+      "name": "ASUS ZenFone Max Pro M1",
+      "maintainer": "Akshat"
+    },
+    "X01AD": {
+      "name": "ASUS ZenFone Max M2",
+      "maintainer": "Arka"
+    },
+    "X01BD": {
+      "name": "ASUS ZenFone Max Pro M2",
+      "maintainer": "legancy"
+    },
+    "Z010D": {
+      "name": "ASUS ZenFone Max",
+      "maintainer": "PBRP Team"
+    }
+  },
+  "coolpad": {
+    "C106": {
+      "name": "Coolpad C1 Dual",
+      "maintainer": "Mr.Anonymous"
+    }
+  },
+  "yu": {
+    "garlic": {
+      "name": "YU Yureka Black",
+      "maintainer": "Pritish Joshi"
+    }
+  },
+  "htc": {
+    "ime": {
+      "name": "HTC U12+",
+      "maintainer": "Jean F. Rivera Ramos"
+    }
+  },
+  "huawei": {
+    "kiwi": {
+      "name": "Huawei Honor 5X",
+      "maintainer": "PBRP Team"
+    }
+  },
+  "infinix": {
+    "X687": {
+      "name": "Infinix Zero 8",
+      "maintainer": "HemanthJabalpuri"
+    }
+  },
+  "intex": {
+    "Cloud_Q11": {
+      "name": "Intex Cloud Q11",
+      "maintainer": "Aryan Karan"
+    }
+  },
+  "lenovo": {
+    "kuntao": {
+      "name": "Lenovo P2",
+      "maintainer": "PBRP Team"
+    },
+    "P1m": {
+      "name": "Lenovo Vibe P1m",
+      "maintainer": "PBRP Team"
+    }
+  },
+  "lge": {
+    "lv517": {
+      "name": "Lenovo K20 Plus",
+      "maintainer": "PBRP Team"
+    }
+  },
+  "motorola": {
+    "sanders": {
+      "name": "Moto G (5S) Plus",
+      "maintainer": "Satham Hussain"
+    }
+  },
+  "samsung": {
+    "a70q": {
+      "name": "Samsung Galaxy A70",
+      "maintainer": "Aswin"
+    },
+    "m20lte": {
+      "name": "Samsung Galaxy M20",
+      "maintainer": "eun0115"
+    },
+    "m21": {
+      "name": "Samsung Galaxy M21",
+      "maintainer": "Nazim"
+    },
+    "m31": {
+      "name": "Samsung Galaxy M31",
+      "maintainer": "Aswin"
+    },
+    "f41": {
+      "name": "Samsung Galaxy F41",
+      "maintainer": "Aswin"
+    }
+  },
+  "TECNO": {
+    "CD6": {
+      "name": "TECNO CAMON 15 Air",
+      "maintainer": "Mikesew1320"
+    },
+    "LD7": {
+      "name": "TECNO POVA",
+      "maintainer": "Punkzappa007"
+    }
+  },
+  "micromax": {
+    "E7746": {
+      "name": "Micromax IN Note 1",
+      "maintainer": "PBRP Team"
+    }
+  },
+  "oneplus": {
+    "oneplus3": {
+      "name": "OnePlus 3/3 T",
+      "maintainer": "dlasdl"
+    },
+      "enchilada": {
+      "name": "OnePlus 6",
+      "maintainer": "SIDDK"
+    },
+     "fajita": {
+      "name": "OnePlus 6T",
+      "maintainer": "SIDDK"
+    },
+     "guacamole": {
+       "name": "OnePlus 7/7 Pro/7 Pro 5G",
+       "maintainer": "Alexandria Cortez"
+    },
+    "OP6xT": {
+      "maintainer": "SIDDK",
+      "unified": ["enchilada", "fajita"]
+    }
+  },
+  "oppo": {
+    "CPH1861": {
+      "name": "Oppo Realme 1",
+      "maintainer": "@I_am_pronoob"
+    }
+  },
+  "realme": {
+    "rmx2020": {
+      "name": "Realme C3/Narzo 10A",
+      "maintainer": "PBRP Team"
+    },
+    "RMX1821": {
+      "name": "Realme 3/3i",
+      "maintainer": "Siddk"
+    },
+    "RMX1801": {
+      "name": "Realme 2 Pro",
+      "maintainer": "Sree Govind S A"
+    },
+    "RMX1851": {
+      "name": "Realme 3 Pro",
+      "maintainer": "Ahmed Moselhi"
+    },
+    "RMX1811": {
+      "name": "Realme C1",
+      "maintainer": "Nova Customizer"
+    },
+    "r5x": {
+      "name": "Realme 5/5s/5i/5NFC",
+      "maintainer": "eun0115"
+    },
+    "RMX1921": {
+      "name": "Realme XT",
+      "maintainer": "Advaith Bhat"
+    },
+    "x2": {
+      "name": "Realme X2",
+      "maintainer": "Jubayer Ahmad Shvon"
+    },
+    "RMX1901": {
+      "name": "Realme X",
+      "maintainer": "Satham Hussain"
+    },
+    "xandxt": {
+      "name": "Realme X/XT",
+      "maintainer": "Satham Hussain"
+    },
+    "bitra": {
+      "name": "Realme GT Neo 2",
+      "maintainer": "SathamHussainM"
+    },
+    "RMX3031": {
+      "name": "Realme X7 Max",
+      "maintainer": "PBRP Team"
+    },
+    "RMX2121": {
+      "name": "Realme X7 Pro",
+      "maintainer": "PBRP Team"
+    },
+    "RMX3092": {
+      "name": "Realme X7",
+      "maintainer": "PBRP Team"
+    },
+    "RMX2193": {
+      "name": "Realme Narzo 20/Realme 7i (EU)",
+      "maintainer": "PBRP Team"
+    },
+    "RMX3191": {
+      "name": "Realme C25",
+      "maintainer": "PBRP Team"
+    },
+    "RMX1941": {
+      "name": "Realme C2",
+      "maintainer": "Siddk"
+    },
+    "RMX2050": {
+      "name": "Realme Narzo 20A",
+      "maintainer": "Siddk"
+    },
+    "moon": {
+      "name": "Realme Narzo 20/30A/7i (EU)",
+      "maintainer": "Sarthak Roy"
+    },
+    "RMX1831":{
+      "name":"Realme U1",
+      "maintainer":"Aryan Sinha"
+    },
+    "RMX2001":{
+      "name":"Realme 6/6i(Indian)/6s",
+      "maintainer":"Firdaus Hakimi"
+    }
+  },
+  "poco": {
+    "juice": {
+      "name": "Xiaomi Pocophone M3/Redmi 9T/Redmi 9 Power/Redmi note 9 4G",
+      "maintainer": "Joemar Taroy"
+    }
+  },
+  "redmi": {
+    "begonia": {
+      "name": "Redmi Note 8 Pro",
+      "maintainer": "Flamefusion"
+    }
+  },
+  "tenor": {
+    "e": {
+      "name": "Tenor E",
+      "maintainer": "PBRP Team"
+    }
+  },
+  "sony": {
+    "dora": {
+      "name": "Sony F8131",
+      "maintainer": "Erwin Abu Bakar Sidik"
+    },
+    "kagura": {
+      "name": "Sony F8331",
+      "maintainer": "Erwin Abu Bakar Sidik"
+    }
+  },
+  "xiaomi": {
+    "apollo": {
+      "name": "Xiaomi Mi 10T/Pro",
+      "maintainer": "Akshat Sinha"
+    },
+    "beryllium": {
+      "name": "Xiaomi Pocophone F1",
+      "maintainer": "Mohd Faraz"
+    },
+    "curtana": {
+      "name": "Xiaomi Redmi Note 9S",
+      "maintainer": "PBRP Team"
+    },
+    "daisy": {
+      "name": "Xiaomi Mi A2 Lite",
+      "maintainer": "PBRP Team"
+    },
+    "excalibur": {
+      "name": "Xiaomi Redmi Note 9 Pro Max",
+      "maintainer": "PBRP Team"
+    },
+    "dipper": {
+      "name": "Xiaomi Mi 8",
+      "maintainer": "PBRP Team"
+    },
+    "ginkgo": {
+      "name": "Xiaomi Redmi Note 8/8T",
+      "maintainer": "Erwin Abu Bakar Sidik"
+    },
+    "gram": {
+      "name": "Xiaomi Poco M2 Pro",
+      "maintainer": "PBRP Team"
+    },
+    "ido": {
+      "name": "Xiaomi Redmi 3",
+      "maintainer": "Jubayer Ahmad Shvon"
+    },
+    "jasmine_sprout": {
+      "name": "Xiaomi Mi A2",
+      "maintainer": "PBRP Team"
+    },
+    "joyeuse": {
+      "name": "Xiaomi Redmi Note 9 Pro",
+      "maintainer": "PBRP Team"
+    },
+    "kenzo": {
+      "name": "Xiaomi Redmi Note 3 Pro/SD",
+      "maintainer": "PBRP Team"
+    },
+    "land": {
+      "name": "Xiaomi Redmi 3S/3X/Prime",
+      "maintainer": "PBRP Team"
+    },
+    "lancelot": {
+      "name": "Xiaomi Redmi 9/9 Prime",
+      "maintainer": "PBRP Team"
+    },
+    "lavender": {
+      "name": "Xiaomi Redmi Note 7",
+      "maintainer": "PBRP Team"
+    },
+    "mido": {
+      "name": "Xiaomi Redmi Note 4/4X",
+      "maintainer": "@shashank1436"
+    },
+    "sweet": {
+      "name": "Xiaomi Redmi Note 10 Pro / Pro Max",
+      "maintainer": "@shashank1436"
+    },
+    "miatoll": {
+      "maintainer": "SIDDK",
+      "unified": ["joyeuse", "curtana", "gram", "excalibur"]
+    },
+    "olive": {
+      "name": "Xiaomi Redmi 8",
+      "maintainer": "deadlylxrd"
+    },
+    "onc": {
+      "name": "Xiaomi Redmi 7/Y3",
+      "maintainer": "Aryan Karan"
+    },
+    "phoenix": {
+      "name": "Xiaomi Redmi K30/Poco X2",
+      "maintainer": "PBRP Team"
+    },
+    "pine": {
+      "name": "Xiaomi Redmi 7A",
+      "maintainer": "AOiSPdev"
+    },
+    "platina": {
+      "name": "Xiaomi MI 8 Lite",
+      "maintainer": "Reza Adi Pangestu"
+    },
+    "raphael": {
+      "name": "Xiaomi Redmi K20 Pro",
+      "maintainer": "PBRP Team"
+    },
+    "rolex": {
+      "name": "Xiaomi Redmi 4a",
+      "maintainer": "Mohd Faraz"
+    },
+    "rosy": {
+      "name": "Xiaomi Redmi 5",
+      "maintainer": "ElytrA8"
+    },
+    "santoni": {
+      "name": "Xiaomi Redmi 4X",
+      "maintainer": "PBRP Team"
+    },
+    "markw": {
+      "name": "Xiaomi Redmi 4 Prime",
+      "maintainer": "Qisthi Iskandar Haqiki"
+    },
+     "tiare": {
+      "name": "Redmi Go",
+      "maintainer": "Aryan Sinha"
+    },
+    "sirius": {
+      "name": "Xiaomi Mi 8 SE",
+      "maintainer": "Qisthi Iskandar Haqiki"
+    },
+    "tulip": {
+      "name": "Xiaomi Redmi Note 6 Pro",
+      "maintainer": "IceBreaker2451"
+    },
+    "ugg": {
+      "name": "Xiaomi Redmi Note 5a Prime",
+      "maintainer": "PBRP Team"
+    },
+    "ugglite": {
+      "name": "Xiaomi Redmi Note 5a",
+      "maintainer": "PBRP Team"
+    },
+    "vince": {
+      "name": "Xiaomi Redmi 5 Plus",
+      "maintainer": "@r_k87 & Kry9toN"
+    },
+    "violet": {
+      "name": "Xiaomi Redmi Note 7 Pro",
+      "maintainer": "Nipin NA (Joker-V2)"
+    },
+    "wayne": {
+      "name": "Xiaomi Mi 6X",
+      "maintainer": "PBRP Team"
+    },
+    "whyred": {
+      "name": "Xiaomi Redmi Note 5",
+      "maintainer": "Reza Adi Pangestu"
+    },
+    "ysl": {
+      "name": "Xiaomi Redmi S2",
+      "maintainer": "PBRP Team"
+    },
+    "oxygen": {
+      "name": "Xiaomi Mi Max 2",
+      "maintainer": "Mahesh Technicals"
+    },
+    "riva": {
+      "name": "Xiaomi Redmi 5A",
+      "maintainer": "Erwin Abu Bakar Sidik"
+    },
+    "cereus": {
+      "name": "Xiaomi Redmi 6",
+      "maintainer": "Erwin Abu Bakar Sidik"
+    },
+    "cactus": {
+      "name": "Xiaomi Redmi 6A",
+      "maintainer": "Erwin Abu Bakar Sidik"
+    },
+    "olivewood": {
+      "name": "Xiaomi Redmi 8A Pro/Dual",
+      "maintainer": "Aryan Sinha"
+    }
+  }
+}

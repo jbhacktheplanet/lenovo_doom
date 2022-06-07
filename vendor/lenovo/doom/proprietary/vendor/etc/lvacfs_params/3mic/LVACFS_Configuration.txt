@@ -1,0 +1,35 @@
+35                                      // Number_of_arguments
+11                                      // MajorBaselineVersion
+0                                       // MinorBaselineVersion
+0                                       // MinorMinorBaselineVersion
+14                                       // PatchBaselineVersion
+0                                       // FileType
+LVM_MODE_ON                             // AZProc
+5                                    // NbProfile
+LVACFS_ABSOLUTE_PATH                    // PathDef
+0                                    // Profile0
+/vendor/etc/lvacfs_params/3mic/LVACFS_ControlParams_backcamer.txt                     // Profile0 back 
+1                                    // Profile1
+/vendor/etc/lvacfs_params/3mic/LVACFS_ControlParams_frontcamer.txt                     // Profile1  front
+2                                     // Profile2
+/vendor/etc/lvacfs_params/3mic/LVACFS_ControlParams_default.txt                     // Profile2  default
+3                                    // Profile4
+/vendor/etc/lvacfs_params/3mic/LVACFS_ControlParams_default.txt                     // Profile2 samewith default for 3rd app
+4                                    // Profile3
+/vendor/etc/lvacfs_params/3mic/LVACFS_ControlParams_backcamer_fixzoom.txt                     // Profile4 back fix zoom
+/vendor/etc/lvacfs_params/3mic/LVACFS_Calibration_3mic.dat                // CalibrationFile
+LVM_MODE_OFF                            // EnableDebug
+LVM_MODE_OFF                            // StatusReporting
+/data/vendor/audio/LVAC_Status.bin          // LVAC_StatusFile
+LVACFS_PCM_MODE_CONTINUOUS                     // InPCMSavingMode
+16000                                   // InPCMSavingBufferSize
+/data/vendor/audio/Ac_in.pcm                // InPCMSavingFilename
+LVACFS_PCM_MODE_OFF                     // InPCMInjectionMode
+16000                                   // InPCMInjectionBufferSize
+/data/vendor/audio/TestInput.pcm                  // InPCMInjectionFilename
+LVACFS_PCM_MODE_CONTINUOUS                     // OutPCMSavingMode
+16000                                   // OutPCMSavingBufferSize
+/data/vendor/audio/Ac_out.pcm               // OutPCMSavingFilename
+LVACFS_PCM_MODE_OFF                     // OutPCMInjectionMode
+16000                                   // OutPCMInjectionBufferSize
+/data/vendor/audio/TestOutput.pcm                  // OutPCMInjectionFilename
