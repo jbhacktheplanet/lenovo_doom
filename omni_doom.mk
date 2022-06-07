@@ -15,6 +15,8 @@ $(call inherit-product, device/lenovo/doom/device.mk)
 
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/pb/config/common.mk)
+#$(call inherit-product, vendor/pb/build/tasks/kernel.mk)
+#$(call inherit-product, vendor/pb/config/BoardConfigKernel.mk)
 #$(call inherit-product, vendor/qcom/lahaina/lahaina.mk)
 #$(call inherit-product, vendor/omni/config/gsm.mk)
 
